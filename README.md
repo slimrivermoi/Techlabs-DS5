@@ -38,6 +38,11 @@ July 20:
   - Team met to discuss respective prelim data analysis, data relationship mapping, data parsing and confirmed approach for our EDA (exploratory data analysis).
   - Identify tasks for further EDA to prepare for ML model building.
 
+July 29:
+  - Further improvement for file organization and data cleanup procedure in Github.
+  - Finalized data cleanup procedure, dataset relationship mapping.
+  - Begin exploration in text analysis with various techniques.
+
 ### Dataset Relationship Mapping
 ---
 The team analyzed the given dataset and mapped the relationship based on identifiers from each respective files. [Dataset Relationship Mapping](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/Lee/Dataset_Relationship_Mapping%2029-07-24.png)
