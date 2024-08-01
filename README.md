@@ -97,6 +97,11 @@ keywords_df.head(20)
 **Mathematics formula for Movie Ratings**
 - [insert here]
 
+**Text analysis**
+- [insert here]
+
+
+
 
 ### Team Space:
 ---
