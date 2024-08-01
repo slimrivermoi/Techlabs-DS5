@@ -46,17 +46,62 @@ July 29:
 ### Dataset Relationship Mapping
 ---
 The team analyzed the given dataset and mapped the relationship based on identifiers from each respective files. [Dataset Relationship Mapping](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/Lee/Dataset_Relationship_Mapping%2029-07-24.png)
+
 ### Libraries Used
 ---
+For data cleanup and data parsing:
+- **ast.literal_eval():** to safely parse the JSON string into a Python object.  
+- **datetime:** to convert variable to datetime format.
+- **pathlib.Path:**  assign file paths when saving DF as CSV.
+- **re:** parsing keywords in text inputs. 
+
+For plotting:
+- matplotlib.pyplot
+- 
 
 ### API Used (if any)
 ---
-
+Potential: 
+- [TMDB Movies Recommendations](https://developer.themoviedb.org/reference/movie-recommendations)
+- [TMDB reviews from user](https://developer.themoviedb.org/reference/movie-reviews)
 ### Algorithm
 ---
 
 ### Explanation of important code
 ---
+**Parsing JSON String to Python Object (List/Dictionary):**
+- This is an important task we must accomplish because multiple series in the datasets are in this format and we must convert them as features for the prediction target.
+- **Using ast.literal_eval()** is the safest and most effective solution we have found to parse the JSON string safely without facing errors (e.g.: JSONDecode Error, TypeError and KeyError) or losing large chunk of data due to Try-Except bypass.
+- See below for an example: 
+```
+import pandas as pd
+import ast
+
+keywords_df = pd.read_csv("../../source_data/keywords.csv")
+
+# Function to parse the string and extract names
+def extract_names(keyword_string):
+    # Safely evaluate the string to a Python object
+    keyword_list = ast.literal_eval(keyword_string)
+    # Extract names
+    names = [keyword['name'] for keyword in keyword_list]
+    return names
+
+# Apply the function to the DataFrame
+keywords_df['names'] = keywords_df['keywords'].apply(extract_names)
+
+# Display the DataFrame
+keywords_df.head(20)
+```
+
+**Mathematics formula for Movie Ratings**
+- [insert here]
+
+**Text analysis**
+- [insert here]
+
+
+
 
 ### Team Space:
 ---
