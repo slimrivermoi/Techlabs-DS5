@@ -62,22 +62,22 @@ Aug 19:
 #### Approach 1: Filter and Ranking Based
 ---
 - Author: [enter your name here]
-- [insert here]
+- [insert here]: explain library used, algorithm steps, etc. 
 
 #### Approach 2: Content Collaboration Prediction Model
 ---
 - Author: [enter your name here]
-- [insert here]
+- [insert here]: explain library used, algorithm steps, etc. 
 
 #### Approach 3: User Preference Prediction Model
 ---
 - Author: [enter your name here]
-- [insert here]
+- [insert here]: explain library used, algorithm steps, etc. 
 
 #### Approach 4: Keywords Prediction Model
 ---
 - Author: [enter your name here]
-- [insert here]
+- [insert here]: explain library used, algorithm steps, etc. 
 
 
  
