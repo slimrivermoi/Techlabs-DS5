@@ -3,14 +3,12 @@
 ---
 - [Michael Fischer](https://github.com/michaeljordan53)
 - [Chan Chham](https://github.com/ChanChham?query=slimrivermoi)
-- [Muhammad Shamsher](https://github.com/Shamsher92)
 - [Lee Yong](https://github.com/slimrivermoi)
 
 
 ### Our Project Mission
 ---
-Using techniques we have learned in Data Science track to analyze, visualize and create data prediction based on ML model to make positive impacts in data science. 
-We have been given 9 datasets (~ 1GB) related to movie and rating data from various sources (TMDB, IMDB, Open Source). At this point, we have yet to determine the specific problem we would like to tackle, the potential prediction target is movie rating prediction.
+To analyze, visualize and create data prediction model to make movies recommendations.
 
 
 ### Project Phases
@@ -25,6 +23,7 @@ Project Duration: 9 weeks (July 6 - Sep 1, 2024)
 | 4 | Define problem that needs to be solved | Week 4-5 | Aug 5 |
 | 5 | Model building and evaluation. | Week 6-7 | Aug 18 |
 | 6 | Prepare for Presentation, complete all documentations | Week 8-9 | Sep 1 |
+
 
 ### Detailed Summary of the project (key milestones)
 ---
@@ -43,70 +42,49 @@ July 29:
   - Finalized data cleanup procedure, dataset relationship mapping.
   - Begin exploration in text analysis with various techniques.
 
+Aug 5: 
+  - Begin proper Exploratory Data Analysis (EDA) and basic recommendation system based on non ML model.
+
+Aug 12: 
+  - Explore various techniques for model building.
+  - techniques include: basic filtering, KNN regression (to predict rating), K-Means Clustering, KNN-classifier, etc.
+  - GUI prototype completed.
+
+Aug 19:
+  - Basic models in various methods completed. Discussed evaluation and finetuning.
+  - Prepare for project submission and presentation.
+
+
 ### Dataset Relationship Mapping
 ---
-The team analyzed the given dataset and mapped the relationship based on identifiers from each respective files. [Dataset Relationship Mapping](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/Lee/Dataset_Relationship_Mapping%2029-07-24.png)
+- A total of 9 datasets (~ 1GB) related to movie and rating data from various sources (TMDB, IMDB, Open Source) were provided to the team.
+- The team analyzed the given dataset and mapped the relationship based on identifiers from each respective files. [Dataset Relationship Mapping](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/Lee/Dataset_Relationship_Mapping%2029-07-24.png)
 
-### Libraries Used
----
-For data cleanup and data parsing:
-- **ast.literal_eval():** to safely parse the JSON string into a Python object.  
-- **datetime:** to convert variable to datetime format.
-- **pathlib.Path:**  assign file paths when saving DF as CSV.
-- **re:** parsing keywords in text inputs. 
 
-For plotting:
-- matplotlib.pyplot
-- 
-
-### API Used (if any)
----
-Potential: 
-- [TMDB Movies Recommendations](https://developer.themoviedb.org/reference/movie-recommendations)
-- [TMDB reviews from user](https://developer.themoviedb.org/reference/movie-reviews)
-### Algorithm
+### Explanation of Models
 ---
 
-### Explanation of important code
+
+**Approach 1: Filter and Ranking Based**
 ---
-**Parsing JSON String to Python Object (List/Dictionary):**
-- This is an important task we must accomplish because multiple series in the datasets are in this format and we must convert them as features for the prediction target.
-- **Using ast.literal_eval()** is the safest and most effective solution we have found to parse the JSON string safely without facing errors (e.g.: JSONDecode Error, TypeError and KeyError) or losing large chunk of data due to Try-Except bypass.
-- See below for an example: 
-```
-import pandas as pd
-import ast
-
-keywords_df = pd.read_csv("../../source_data/keywords.csv")
-
-# Function to parse the string and extract names
-def extract_names(keyword_string):
-    # Safely evaluate the string to a Python object
-    keyword_list = ast.literal_eval(keyword_string)
-    # Extract names
-    names = [keyword['name'] for keyword in keyword_list]
-    return names
-
-# Apply the function to the DataFrame
-keywords_df['names'] = keywords_df['keywords'].apply(extract_names)
-
-# Display the DataFrame
-keywords_df.head(20)
-```
-
-**Mathematics formula for Movie Ratings**
+- Author: [enter your name here]
 - [insert here]
 
-**Text analysis**
+**Approach 2: Content Collaboration Prediction Model**
+---
+- Author: [enter your name here]
 - [insert here]
 
-
-
-
-### Team Space:
+- **Approach 3: User Preference Prediction Model**
 ---
-1. [Q&A](https://www.notion.so/Question-and-Issues-5783ec63fba843e698d1f9913926abe8)
-2. [Detailed journal](https://www.notion.so/7f1283873ba049998330cb60b68acfd6?v=9c0d17e321bd4d738bf5ce479dbde791)
+- Author: [enter your name here]
+- [insert here]
+
+- - **Approach 4: Keywords Prediction Model**
+---
+- Author: [enter your name here]
+- [insert here]
+
 
  
  
