@@ -1,17 +1,14 @@
-# Düsseldorf Techlabs Data Science Team 5
-### Project Team
+# Düsseldorf Techlabs Data Science Team 5 - The Data Avengers
+**Project Mission:** to analyze, visualize and create data prediction model to make movies recommendations.
+
+#### Project Team 
 ---
 - [Michael Fischer](https://github.com/michaeljordan53)
 - [Chan Chham](https://github.com/ChanChham?query=slimrivermoi)
 - [Lee Yong](https://github.com/slimrivermoi)
 
 
-### Our Project Mission
----
-To analyze, visualize and create data prediction model to make movies recommendations.
-
-
-### Project Phases
+#### Project Phases
 ---
 Project Duration: 9 weeks (July 6 - Sep 1, 2024)
 
@@ -25,7 +22,7 @@ Project Duration: 9 weeks (July 6 - Sep 1, 2024)
 | 6 | Prepare for Presentation, complete all documentations | Week 8-9 | Sep 1 |
 
 
-### Detailed Summary of the project (key milestones)
+#### Detailed Summary of the project (key milestones)
 ---
 July 14:
   - Team setup, received project instructions, GitHub setup, etc.
@@ -61,26 +58,23 @@ Aug 19:
 - The team analyzed the given dataset and mapped the relationship based on identifiers from each respective files. [Dataset Relationship Mapping](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/Lee/Dataset_Relationship_Mapping%2029-07-24.png)
 
 
-### Explanation of Models
----
-
-
-**Approach 1: Filter and Ranking Based**
+## Explanation of Models
+#### Approach 1: Filter and Ranking Based
 ---
 - Author: [enter your name here]
 - [insert here]
 
-**Approach 2: Content Collaboration Prediction Model**
+#### Approach 2: Content Collaboration Prediction Model
 ---
 - Author: [enter your name here]
 - [insert here]
 
-- **Approach 3: User Preference Prediction Model**
+#### Approach 3: User Preference Prediction Model
 ---
 - Author: [enter your name here]
 - [insert here]
 
-- - **Approach 4: Keywords Prediction Model**
+#### Approach 4: Keywords Prediction Model
 ---
 - Author: [enter your name here]
 - [insert here]
