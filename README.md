@@ -27,18 +27,14 @@ Project Duration: 9 weeks (July 6 - Sep 1, 2024)
 July 14:
   - Team setup, received project instructions, GitHub setup, etc.
   - The team set ground rules of engagement, clarify roles, connect Repo and Project on Github.
-  - The team meet 2 times a week and use Slack as main communication channel.
-  - Mathemetic formula comparisons for movie rating predictions.
 
 July 20:
   - Team met to discuss respective prelim data analysis, data relationship mapping, data parsing and confirmed approach for our EDA (exploratory data analysis).
-  - Identify tasks for further EDA to prepare for ML model building.
 
 July 29:
   - Further improvement for file organization and data cleanup procedure in Github.
   - Finalized data cleanup procedure, dataset relationship mapping.
-  - Begin exploration in text analysis with various techniques.
-
+  
 Aug 5: 
   - Begin proper Exploratory Data Analysis (EDA) and basic recommendation system based on non ML model.
 
@@ -51,7 +47,6 @@ Aug 19:
   - Basic models in various methods completed. Discussed evaluation and finetuning.
   - Prepare for project submission and presentation.
 
-
 ### Dataset Relationship Mapping
 ---
 - A total of 9 datasets (~ 1GB) related to movie and rating data from various sources (TMDB, IMDB, Open Source) were provided to the team.
@@ -59,26 +54,26 @@ Aug 19:
 
 
 ## Explanation of Models
-#### Approach 1: Filter and Ranking Based
+#### Approach 1: Content filter based
 ---
 - Author: [enter your name here]
 - [insert here]: explain library used, algorithm steps, etc. 
 
-#### Approach 2: Content Collaboration Prediction Model
+#### Approach 2: Collaborative Content Predictive Model
 ---
 - Author: [enter your name here]
 - [insert here]: explain library used, algorithm steps, etc. 
 
-#### Approach 3: User Preference Prediction Model
+#### Approach 4: Text-Cluster Classification Prediction Model
 ---
-- Author: [enter your name here]
-- [insert here]: explain library used, algorithm steps, etc. 
-
-#### Approach 4: Keywords Prediction Model
----
-- Author: [enter your name here]
-- [insert here]: explain library used, algorithm steps, etc. 
-
+Author: Lee Yee Yong
+**Link to Notebook: Insert here**
+- This basic Natural Language Processing (NLP) model involves the following steps:
+  - **Step 1: Text Pre-Processing:** using Regex (RE) to ensure all texts related to the movie are formatted and stripped before being transformed.
+  - **Step 2: Vocabulary Extraction and Transformation:** through TfidfVectorizer, the source text variable will undergo 3 important steps such as vocabulary extraction, word counts and calculation of Inverse Document Frequency (IDF) which can be used as a feature for our model.  
+  - **Step 3: Cluster Analysis with K-Means:** a cluster label is then assigned to each movie by using K-Means text-clustering technique. The assigned cluster label can now be used as our target (y) for prediction. As a result of this step, movies with relevant vocabularies now belong to certain clusters. 
+  - **Step 4: KNN Classifier Fitting:** using the KNeighbours Classifier model, we defined the transformed text as the feature (X) and the cluster value as our target (y) and then transformed the data with the standard train-test-split at 75/25 (75% of data will be used for training, 25% would be used as test).
+  - **Step 5: Prediction Model:** finally, we set up a query to ask user to provide a text input. The input will then be vectorized and fit into our model for prediction. 
 
  
  
