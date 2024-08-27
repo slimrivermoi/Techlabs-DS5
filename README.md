@@ -22,60 +22,51 @@ Project Duration: 9 weeks (July 6 - Sep 1, 2024)
 | 6 | Prepare for Presentation, complete all documentations | Week 8-9 | Sep 1 |
 
 
-#### Detailed Summary of the project (key milestones)
+### Abstract
+We developed a comprehensive Movie Recommendation System from simple content-based filtering to text-cluster prediction model. Our system aims to enhance user experience by providing personalized movie recommendations based on users preferences and interests. 
+
+### Introduction
+We received 9 dataset containing information about movies, ratings, keywords, cast and crew information. Some databases have similar fields but with less data (45,000 vs. 5,000 rows of movie data) while others have data noise to be addressed . The issues we faced were:
+- How are these datasets related to one another?
+- What are the definitions for the variables? 
+- Shall we build a movie recommendation or rating prediction system?
+
 ---
-July 14:
-  - Team setup, received project instructions, GitHub setup, etc.
-  - The team set ground rules of engagement, clarify roles, connect Repo and Project on Github.
+### Methods
+**Dataset Understanding:** after verifying the data source and definition, we drafted a [Dataset Relationship Mapping](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/Lee/Dataset_Relationship_Mapping%2029-07-24.png). This helps us to understand which are the useful variables and how they are related to one another. 
 
-July 20:
-  - Team met to discuss respective prelim data analysis, data relationship mapping, data parsing and confirmed approach for our EDA (exploratory data analysis).
+**Data Preparation and JSON Parson:** we performed basic cleanup steps such as removing duplicate records, erroneous rows with mismatched labels and non-movie entries. In this phase, we used [ast.literal_eval()](https://docs.python.org/3/library/ast.html#ast.literal_eval) to parse JSON strings from variables such as genres, cast, crew, and keywords to extract useful data which are critical features of our model.
 
-July 29:
-  - Further improvement for file organization and data cleanup procedure in Github.
-  - Finalized data cleanup procedure, dataset relationship mapping.
-  
-Aug 5: 
-  - Begin proper Exploratory Data Analysis (EDA) and basic recommendation system based on non ML model.
+**Exploratory Data Analysis (EDA) and Data Visualization:** with Matplotlib and seaborn, we visualized rating distributions, genre popularity, and user behavior to uncover insights that would shape our recommendation strategies. Key findings included trends in user preferences (ratings), the impact of movie genres, data noise to be anticipated and the importance of certain features in driving recommendations.  
 
-Aug 12: 
-  - Explore various techniques for model building.
-  - techniques include: basic filtering, KNN regression (to predict rating), K-Means Clustering, KNN-classifier, etc.
-  - GUI prototype completed.
-
-Aug 19:
-  - Basic models in various methods completed. Discussed evaluation and finetuning.
-  - Prepare for project submission and presentation.
-
-### Dataset Relationship Mapping
 ---
-- A total of 9 datasets (~ 1GB) related to movie and rating data from various sources (TMDB, IMDB, Open Source) were provided to the team.
-- The team analyzed the given dataset and mapped the relationship based on identifiers from each respective files. [Dataset Relationship Mapping](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/Lee/Dataset_Relationship_Mapping%2029-07-24.png)
+### Building the Recommendation System
+We explored several ways to develop our movie recommendation system, knowing that users typically choose movies based on several approaches from simple genres filtering to cast/director name or keywords searches. Here are the 3 approaches we had developed.   
 
+**Approach 1: Content based filtering [Link to Notebook]()** 
 
-## Explanation of Models
-#### Approach 1: Content filter based
+This method used basic query technique to return recommendations based on name of actor/actress, genre and years of release. The recommendation is then sorted by a variable called [“Popularity”](https://developer.themoviedb.org/docs/popularity-and-trending) which is an important metric developed by TMDB with sophisticated criteria to rank all-time-favorite movies. 
+
 ---
-- Author: [enter your name here]
-- [insert here]: explain library used, algorithm steps, etc. 
+**Approach 2: Content-based KNN Classification Prediction with COSimilarity [Link to Notebook]()** 
 
-#### Approach 2: Collaborative Content Predictive Model
+This approach finds and visualizes similar movies based on their descriptions using text analysis (KNN and TF-IDF) and cosine similarity:
+- **Step 1:** Combine Text Features: Merge movie taglines, overviews, and keywords into a single text string for each movie.
+- **Step 2:** Vectorize Text Data: Use [TF-IDF vectorization](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html) to convert the combined text into numerical representations that highlight important words.
+- **Step 3:** Find Similar Movies: Apply the [Nearest Neighbors](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html) algorithm using cosine similarity to identify the top 5 movies similar to a given movie title.
+- **Step 4:** Visualize Similarity (Optional): Plot the [cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html) of the recommended movies in a 2D space to visually represent their relationship to the input movie
 ---
-- Author: [enter your name here]
-- [insert here]: explain library used, algorithm steps, etc. 
 
-#### Approach 4: Text-Cluster Classification Prediction Model
+**Approach 3: Text-Cluster KNN Classification Prediction [Link to Notebook]()** 
+
+This Natural Language Processing (NLP) model involves the following steps:
+- **Step 1: Text Pre-Processing:** using Regex (RE) to ensure all texts related to the movie are formatted and stripped before being transformed.
+- **Step 2: Vocabulary Extraction and Transformation:** through [TfidfVectorizer](https://scikit-learn.org/stable/modules/generated/sklearn.feature_extraction.text.TfidfVectorizer.html), the source text variable will undergo important steps such as vocabulary extraction, word counts and calculation of Inverse Document Frequency (IDF).
+- **Step 3: Cluster Analysis with K-Means:** a cluster label is then assigned to each movie by using [K-Means text-clustering](https://scikit-learn.org/stable/auto_examples/text/plot_document_clustering.html#sphx-glr-auto-examples-text-plot-document-clustering-py) technique. 
+- **Step 4: KNN Classifier Fitting:** using the [KNeighbours Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html) model, we conducted a test-train-split and fit our model.
 ---
-Author: Lee Yee Yong
-**Link to Notebook: Insert here**
-- This basic Natural Language Processing (NLP) model involves the following steps:
-  - **Step 1: Text Pre-Processing:** using Regex (RE) to ensure all texts related to the movie are formatted and stripped before being transformed.
-  - **Step 2: Vocabulary Extraction and Transformation:** through TfidfVectorizer, the source text variable will undergo 3 important steps such as vocabulary extraction, word counts and calculation of Inverse Document Frequency (IDF) which can be used as a feature for our model.  
-  - **Step 3: Cluster Analysis with K-Means:** a cluster label is then assigned to each movie by using K-Means text-clustering technique. The assigned cluster label can now be used as our target (y) for prediction. As a result of this step, movies with relevant vocabularies now belong to certain clusters. 
-  - **Step 4: KNN Classifier Fitting:** using the KNeighbours Classifier model, we defined the transformed text as the feature (X) and the cluster value as our target (y) and then transformed the data with the standard train-test-split at 75/25 (75% of data will be used for training, 25% would be used as test).
-  - **Step 5: Prediction Model:** finally, we set up a query to ask user to provide a text input. The input will then be vectorized and fit into our model for prediction. 
-
  
- 
+### GUI Prototype with tkinter [Link to Notebook]()
+In order to showcase our recommendation system, we built a simple GUI prototype to fit our model using tkinter. It is a basic Python toolkit that allows us to set up a simple GUI quickly.
  
 
