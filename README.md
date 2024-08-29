@@ -1,15 +1,13 @@
 # Düsseldorf Techlabs Data Science Team 5 - The Data Avengers
 **Project Mission:** to analyze, visualize and create data prediction model to make movies recommendations.
 
-#### Project Team 
----
+### Project Team 
 - [Michael Fischer](https://github.com/michaeljordan53)
 - [Chan Chham](https://github.com/ChanChham?query=slimrivermoi)
 - [Lee Yong](https://github.com/slimrivermoi)
 
 
-#### Project Phases
----
+### Project Phases
 Project Duration: 9 weeks (July 6 - Sep 1, 2024)
 
 | Steps | Description | Timeline | Completion Date |
