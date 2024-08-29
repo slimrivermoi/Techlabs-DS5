@@ -14,13 +14,12 @@ Project Duration: 9 weeks (July 6 - Sep 1, 2024)
 
 | Steps | Description | Timeline | Completion Date |
 | ----------- | ----------- | ----------- | ----------- |
-| 1 | Team and project setup | Week 1 | July 14 |
+| 1 | Team and Project setup | Week 1 | July 14 |
 | 2 | Exploratory Data Analysis (EDA) | Week 2 | July 21 |
-| 3 | data analysis | Week 3-4 | July 28 |
-| 4 | Define problem that needs to be solved | Week 4-5 | Aug 5 |
-| 5 | Model building and evaluation. | Week 6-7 | Aug 18 |
-| 6 | Prepare for Presentation, complete all documentations | Week 8-9 | Sep 1 |
-
+| 3 | Data Cleanup & Analysis | Week 3-4 | July 28 |
+| 4 | Problem Definition | Week 4-5 | Aug 5 |
+| 5 | Modelling & Evaluation | Week 6-7 | Aug 18 |
+| 6 | Final Presentation prep, Submission | Week 8-9 | Sep 1 |
 
 ### Abstract
 We developed a comprehensive Movie Recommendation System from simple content-based filtering to text-cluster prediction model. Our system aims to enhance user experience by providing personalized movie recommendations based on users preferences and interests. 
