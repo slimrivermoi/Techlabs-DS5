@@ -40,12 +40,12 @@ We received 9 dataset containing information about movies, ratings, keywords, ca
 ### Building the Recommendation System
 We explored several ways to develop our movie recommendation system, knowing that users typically choose movies based on several approaches from simple genres filtering to cast/director name or keywords searches. Here are the 3 approaches we had developed.   
 
-**Approach 1: Content based filtering [Link to Notebook]()** 
+**Approach 1: Content based filtering [Link to Notebook](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/Movie%20Recommendation%20System%20Models.ipynb)** 
 
 This method used basic query technique to return recommendations based on name of actor/actress, genre and years of release. The recommendation is then sorted by a variable called [“Popularity”](https://developer.themoviedb.org/docs/popularity-and-trending) which is an important metric developed by TMDB with sophisticated criteria to rank all-time-favorite movies. 
 
 ---
-**Approach 2: Content-based KNN Classification Prediction with COSimilarity [Link to Notebook]()** 
+**Approach 2: Content-based KNN Classification Prediction with COSimilarity [Link to Notebook](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/Movie%20Recommendation%20System%20Models.ipynb)** 
 
 This approach finds and visualizes similar movies based on their descriptions using text analysis (KNN and TF-IDF) and cosine similarity:
 - **Step 1:** Combine Text Features: Merge movie taglines, overviews, and keywords into a single text string for each movie.
@@ -63,7 +63,7 @@ This Natural Language Processing (NLP) model involves the following steps:
 - **Step 4: KNN Classifier Fitting:** using the [KNeighbours Classifier](https://scikit-learn.org/stable/modules/generated/sklearn.neighbors.KNeighborsClassifier.html) model, we conducted a test-train-split and fit our model.
 ---
  
-### GUI Prototype with tkinter [Link to Notebook]()
+### GUI Prototype with tkinter [Link to Notebook](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/Movie%20Recommendation%20System%20Models.ipynb)
 In order to showcase our recommendation system, we built a simple GUI prototype to fit our model using tkinter. It is a basic Python toolkit that allows us to set up a simple GUI quickly.
  
 
