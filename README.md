@@ -54,7 +54,7 @@ This approach finds and visualizes similar movies based on their descriptions us
 - **Step 4:** Visualize Similarity (Optional): Plot the [cosine similarity](https://scikit-learn.org/stable/modules/generated/sklearn.metrics.pairwise.cosine_similarity.html) of the recommended movies in a 2D space to visually represent their relationship to the input movie
 ---
 
-**Approach 3: Text-Cluster KNN Classification Prediction [Link to Notebook](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/text_cluster_KNN_classifier_model.ipynb)** 
+**Approach 3: Text-Cluster KNN Classification Prediction [Link to Notebook](https://github.com/slimrivermoi/Techlabs-DS5/blob/main/edit_data/text_cluster_KNN_model.ipynb)** 
 
 This Natural Language Processing (NLP) model involves the following steps:
 - **Step 1: Text Pre-Processing:** using Regex (RE) to ensure all texts related to the movie are formatted and stripped before being transformed.
