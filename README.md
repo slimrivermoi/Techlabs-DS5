@@ -67,3 +67,7 @@ This Natural Language Processing (NLP) model involves the following steps:
 In order to showcase our recommendation system, we built a simple GUI prototype to fit our model using tkinter. It is a basic Python toolkit that allows us to set up a simple GUI quickly.
  
 
+https://github.com/user-attachments/assets/708189c6-89c1-4bbe-93f0-c82d50cf8f04
+
+
+
